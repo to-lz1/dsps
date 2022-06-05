@@ -99,7 +99,7 @@ func (v *validator) Validate(ctx context.Context, jwt string) error {
 
 	// Parse and validate "exp", "nbf", "iat", signature
 	claims := jwtgo.MapClaims{}
-	var keyFuncError error = nil
+	var keyFuncError error
 	if _, err := v.parser.ParseWithClaims(jwt, claims, func(t *jwtgo.Token) (interface{}, error) {
 		key, err := v.findKeyCandidate(t, jwt)
 		keyFuncError = err
