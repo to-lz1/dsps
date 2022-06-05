@@ -2,7 +2,7 @@ FROM golang:1.18.3
 ARG DSPS_VERSION_ID=""
 WORKDIR /go/src/github.com/dsps/server
 COPY . .
-RUN go get && go get github.com/Songmu/gocredits/cmd/gocredits
+RUN go install && go install github.com/Songmu/gocredits/cmd/gocredits
 RUN make dsps/dsps-$(uname -o | sed 's/GNU\///')-$(uname -m) && mv dsps/dsps-$(uname -o | sed 's/GNU\///')-$(uname -m) /dsps.bin
 
 FROM alpine:3.12.3
