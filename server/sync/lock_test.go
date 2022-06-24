@@ -29,7 +29,7 @@ func TestLockCancel(t *testing.T) {
 	assert.NoError(t, err)
 	defer unlock()
 
-	var canceled int32 = 0
+	var canceled int32
 	time.AfterFunc(30*time.Millisecond, func() {
 		atomic.StoreInt32(&canceled, 1)
 		cancel()

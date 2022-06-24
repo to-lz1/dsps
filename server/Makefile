@@ -33,7 +33,7 @@ lint: generate
 	rm go.mod.bak
 
 generate:
-	go get github.com/golang/mock/mockgen
+	go install github.com/golang/mock/mockgen
 	go generate ./...
 
 $(release_dir).zip: $(release_dir)/README.md $(release_dir)/CREDITS $(release_dir)/dsps-Linux-x86_64 $(release_dir)/dsps-Linux-aarch64 $(release_dir)/dsps-Windows-x86_64.exe $(release_dir)/dsps-Darwin-x86_64
@@ -43,7 +43,7 @@ $(release_dir):
 	mkdir $(release_dir)
 
 $(release_dir)/CREDITS: $(go_module_files) | $(release_dir)
-	go get github.com/Songmu/gocredits/cmd/gocredits
+	go install github.com/Songmu/gocredits/cmd/gocredits
 	rm -f $@
 	gocredits -skip-missing . > $@
 

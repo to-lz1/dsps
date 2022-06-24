@@ -17,7 +17,7 @@ func AssertErrorResponse(t *testing.T, res *http.Response, httpStatus int, dspsE
 	body := BodyJSONMapOfRes(t, res)
 	assert.Regexp(t, messageRegex, body["error"])
 
-	var expectedCode interface{} = nil
+	var expectedCode interface{}
 	if dspsError != nil {
 		expectedCode = dspsError.Code()
 	}
