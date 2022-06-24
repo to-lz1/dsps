@@ -28,7 +28,7 @@ func (mux *multiplexClient) String() string {
 }
 
 func (mux *multiplexClient) Send(ctx context.Context, msg domain.Message) error {
-	var lastError error = nil
+	var lastError error
 	for _, c := range mux.clients {
 		if err := c.Send(ctx, msg); err != nil {
 			if lastError != nil {

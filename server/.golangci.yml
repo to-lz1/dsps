@@ -10,10 +10,9 @@ linters:
   enable:
     - godox
     - goimports
-    - golint
     - gosec
-    - noctx
     - nolintlint
     - prealloc
+    - revive
     - misspell
 

@@ -7,7 +7,7 @@ jobs:
 
     runs-on: ubuntu-latest
     env:
-      go-version: 1.15.6
+      go-version: 1.18.3
 
     steps:
       - uses: actions/checkout@v2
@@ -24,7 +24,7 @@ jobs:
       - name: golangci-lint
         uses: golangci/golangci-lint-action@v2
         with:
-          version: v1.33.0
+          version: v1.46.2
           working-directory: server
       - name: Other Lint
         shell: bash
@@ -41,7 +41,7 @@ jobs:
     name: Server test
 
     runs-on: ubuntu-latest
-    container: golang:1.15.6-buster
+    container: golang:1.18.3-bullseye
     services:
       redis:
         image: redis:6.0.9
@@ -81,13 +81,13 @@ jobs:
         with:
           name: coverage.html
           path: server/coverage.html
-  
+
   build-test:
     name: Server Build
 
     runs-on: ubuntu-latest
     env:
-      go-version: 1.15.6
+      go-version: 1.18.3
 
     steps:
       - uses: actions/checkout@v2

@@ -121,11 +121,11 @@ func (s *redisStorage) fetchMessagesNow(ctx context.Context, sl domain.Subscribe
 		return
 	}
 
-	var lastMessageClock *channelClock = nil
+	var lastMessageClock *channelClock
 	ackHandle = domain.AckHandle{}
 	messages = make([]domain.Message, 0, max)
 	for i, rawPtr := range rawMsgs {
-		var raw string = ""
+		var raw string
 		if rawPtr != nil {
 			raw = *rawPtr
 		}
@@ -188,7 +188,7 @@ func (s *redisStorage) IsOldMessages(ctx context.Context, sl domain.SubscriberLo
 	}
 	result := make(map[domain.MessageLocator]bool, len(msgs))
 	for i, clock := range clocks[mGetOffset:] {
-		var msgClock *channelClock = nil
+		var msgClock *channelClock
 		if clock != nil {
 			msgClock = parseChannelClock(*clock)
 		}
