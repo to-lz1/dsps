@@ -22,10 +22,11 @@ jobs:
           go mod download
           make generate
       - name: golangci-lint
-        uses: golangci/golangci-lint-action@v2
+        uses: golangci/golangci-lint-action@v3
         with:
           version: v1.46.2
           working-directory: server
+          skip-pkg-cache: true
       - name: Other Lint
         shell: bash
         working-directory: server
@@ -81,3 +82,25 @@ jobs:
         with:
           name: coverage.html
           path: server/coverage.html
+
+  build-test:
+    name: Server Build
+
+    runs-on: ubuntu-latest
+    env:
+      go-version: 1.18.3
+
+    steps:
+      - uses: actions/checkout@v2
+      # Note: golangci/golangci-lint-action caches. Should not use actions/cache@v2 otherwise result in so many "File exists"
+      - uses: actions/setup-go@v2
+        with:
+          go-version: ${{ env.go-version }}
+      - name: build
+        uses: goreleaser/goreleaser-action@v2
+        with:
+          version: latest
+          workdir: server
+          args: build --rm-dist --snapshot
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
