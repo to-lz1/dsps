@@ -3,7 +3,7 @@ package jwt
 import (
 	jwtgo "github.com/dgrijalva/jwt-go/v4"
 
-	"github.com/saiya/dsps/server/domain"
+	"github.com/m3dev/dsps/server/domain"
 )
 
 // ExtractJti read "jti" claim of JWT. Does not perform any JWT validation.

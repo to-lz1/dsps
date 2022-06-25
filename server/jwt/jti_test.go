@@ -5,9 +5,9 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/saiya/dsps/server/domain"
-	. "github.com/saiya/dsps/server/jwt"
-	. "github.com/saiya/dsps/server/jwt/testing"
+	"github.com/m3dev/dsps/server/domain"
+	. "github.com/m3dev/dsps/server/jwt"
+	. "github.com/m3dev/dsps/server/jwt/testing"
 )
 
 func TestExtractJti(t *testing.T) {

@@ -7,7 +7,7 @@ import (
 	"github.com/go-redis/redis/v8"
 	"golang.org/x/xerrors"
 
-	"github.com/saiya/dsps/server/logger"
+	"github.com/m3dev/dsps/server/logger"
 )
 
 type worker interface {

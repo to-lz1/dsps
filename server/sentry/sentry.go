@@ -5,7 +5,7 @@ import (
 	"time"
 
 	sentrygo "github.com/getsentry/sentry-go"
-	"github.com/saiya/dsps/server/config"
+	"github.com/m3dev/dsps/server/config"
 	"golang.org/x/xerrors"
 )
 

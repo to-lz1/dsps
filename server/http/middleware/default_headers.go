@@ -3,7 +3,7 @@ package middleware
 import (
 	"context"
 
-	"github.com/saiya/dsps/server/http/router"
+	"github.com/m3dev/dsps/server/http/router"
 )
 
 // DefaultHeadersDependency is to inject required objects to the middleware

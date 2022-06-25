@@ -4,7 +4,7 @@ import (
 	"context"
 	"time"
 
-	"github.com/saiya/dsps/server/sync"
+	"github.com/m3dev/dsps/server/sync"
 )
 
 var gcInterval = 5 * time.Minute

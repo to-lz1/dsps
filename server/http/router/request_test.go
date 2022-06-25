@@ -7,7 +7,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	. "github.com/saiya/dsps/server/http/router"
+	. "github.com/m3dev/dsps/server/http/router"
 )
 
 func TestRequest(t *testing.T) {

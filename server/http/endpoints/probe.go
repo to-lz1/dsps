@@ -4,9 +4,9 @@ import (
 	"context"
 	"net/http"
 
-	"github.com/saiya/dsps/server/domain"
-	"github.com/saiya/dsps/server/http/router"
-	"github.com/saiya/dsps/server/http/utils"
+	"github.com/m3dev/dsps/server/domain"
+	"github.com/m3dev/dsps/server/http/router"
+	"github.com/m3dev/dsps/server/http/utils"
 )
 
 // ProbeEndpointDependency is to inject required objects to the endpoint

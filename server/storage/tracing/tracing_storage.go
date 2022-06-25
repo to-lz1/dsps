@@ -3,9 +3,9 @@ package tracing
 import (
 	"context"
 
-	"github.com/saiya/dsps/server/domain"
-	"github.com/saiya/dsps/server/storage/deps"
-	"github.com/saiya/dsps/server/telemetry"
+	"github.com/m3dev/dsps/server/domain"
+	"github.com/m3dev/dsps/server/storage/deps"
+	"github.com/m3dev/dsps/server/telemetry"
 )
 
 type tracingStorage struct {

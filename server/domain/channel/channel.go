@@ -4,9 +4,9 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/saiya/dsps/server/domain"
-	jwtv "github.com/saiya/dsps/server/jwt/validator"
-	"github.com/saiya/dsps/server/webhook/outgoing"
+	"github.com/m3dev/dsps/server/domain"
+	jwtv "github.com/m3dev/dsps/server/jwt/validator"
+	"github.com/m3dev/dsps/server/webhook/outgoing"
 	"golang.org/x/xerrors"
 )
 

@@ -4,9 +4,9 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/saiya/dsps/server/config"
-	"github.com/saiya/dsps/server/http/router"
-	"github.com/saiya/dsps/server/http/utils"
+	"github.com/m3dev/dsps/server/config"
+	"github.com/m3dev/dsps/server/http/router"
+	"github.com/m3dev/dsps/server/http/utils"
 )
 
 // AdminAuthDependency is to inject required objects to the middleware

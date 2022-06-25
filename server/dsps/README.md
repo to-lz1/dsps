@@ -1,6 +1,6 @@
 # DSPS - Durable & Simple PubSub
 
-Go to https://github.com/saiya/dsps for information.
+Go to https://github.com/m3dev/dsps for information.
 
 ## Which binary file to use?
 

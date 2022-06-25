@@ -7,9 +7,9 @@ import (
 
 	"golang.org/x/xerrors"
 
-	"github.com/saiya/dsps/server/domain"
-	"github.com/saiya/dsps/server/logger"
-	"github.com/saiya/dsps/server/storage/redis/internal/pubsub"
+	"github.com/m3dev/dsps/server/domain"
+	"github.com/m3dev/dsps/server/logger"
+	"github.com/m3dev/dsps/server/storage/redis/internal/pubsub"
 )
 
 func (s *redisStorage) PublishMessages(ctx context.Context, msgs []domain.Message) error {

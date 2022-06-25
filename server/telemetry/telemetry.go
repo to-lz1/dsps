@@ -3,9 +3,9 @@ package telemetry
 import (
 	"context"
 
-	"github.com/saiya/dsps/server/config"
-	"github.com/saiya/dsps/server/logger"
-	"github.com/saiya/dsps/server/telemetry/opentelemetry"
+	"github.com/m3dev/dsps/server/config"
+	"github.com/m3dev/dsps/server/logger"
+	"github.com/m3dev/dsps/server/telemetry/opentelemetry"
 )
 
 // Telemetry represents tracing/metrics system

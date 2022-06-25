@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/saiya/dsps/server/http/router"
-	"github.com/saiya/dsps/server/http/utils"
-	"github.com/saiya/dsps/server/logger"
-	"github.com/saiya/dsps/server/sentry"
+	"github.com/m3dev/dsps/server/http/router"
+	"github.com/m3dev/dsps/server/http/utils"
+	"github.com/m3dev/dsps/server/logger"
+	"github.com/m3dev/dsps/server/sentry"
 )
 
 // LoggingMiddleware is middleware for logging

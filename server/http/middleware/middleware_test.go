@@ -4,7 +4,7 @@ import (
 	"context"
 	"testing"
 
-	"github.com/saiya/dsps/server/http/router"
+	"github.com/m3dev/dsps/server/http/router"
 	"github.com/stretchr/testify/assert"
 )
 

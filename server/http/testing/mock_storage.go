@@ -3,7 +3,7 @@ package testing
 import (
 	"github.com/golang/mock/gomock"
 
-	"github.com/saiya/dsps/server/domain/mock"
+	"github.com/m3dev/dsps/server/domain/mock"
 )
 
 // NewMockStorages creates storage mock objects

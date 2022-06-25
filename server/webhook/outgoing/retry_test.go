@@ -8,7 +8,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/saiya/dsps/server/sentry"
+	"github.com/m3dev/dsps/server/sentry"
 	"github.com/stretchr/testify/assert"
 )
 

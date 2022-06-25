@@ -7,9 +7,9 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	. "github.com/saiya/dsps/server/config"
-	"github.com/saiya/dsps/server/domain"
-	. "github.com/saiya/dsps/server/testing"
+	. "github.com/m3dev/dsps/server/config"
+	"github.com/m3dev/dsps/server/domain"
+	. "github.com/m3dev/dsps/server/testing"
 )
 
 func TestChannelJwtDefaultConfig(t *testing.T) {

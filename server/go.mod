@@ -1,4 +1,4 @@
-module github.com/saiya/dsps/server
+module github.com/m3dev/dsps/server
 
 go 1.18
 

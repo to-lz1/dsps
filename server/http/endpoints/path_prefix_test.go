@@ -6,8 +6,8 @@ import (
 	"github.com/golang/mock/gomock"
 	"github.com/stretchr/testify/assert"
 
-	. "github.com/saiya/dsps/server/http"
-	. "github.com/saiya/dsps/server/http/testing"
+	. "github.com/m3dev/dsps/server/http"
+	. "github.com/m3dev/dsps/server/http/testing"
 )
 
 func TestPathPrefix(t *testing.T) {

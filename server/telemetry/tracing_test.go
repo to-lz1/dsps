@@ -9,7 +9,7 @@ import (
 
 	ottrace "go.opentelemetry.io/otel/trace"
 
-	"github.com/saiya/dsps/server/domain"
+	"github.com/m3dev/dsps/server/domain"
 )
 
 func TestHTTPSpan(t *testing.T) {

@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/saiya/dsps/server/domain"
+	"github.com/m3dev/dsps/server/domain"
 )
 
 // SentryConfig contains Sentry configuration

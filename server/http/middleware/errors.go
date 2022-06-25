@@ -1,7 +1,7 @@
 package middleware
 
 import (
-	"github.com/saiya/dsps/server/domain"
+	"github.com/m3dev/dsps/server/domain"
 )
 
 var (

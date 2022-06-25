@@ -7,8 +7,8 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/saiya/dsps/server/domain/channel"
-	. "github.com/saiya/dsps/server/jwt/testing"
+	"github.com/m3dev/dsps/server/domain/channel"
+	. "github.com/m3dev/dsps/server/jwt/testing"
 )
 
 func TestChannelExpire(t *testing.T) {

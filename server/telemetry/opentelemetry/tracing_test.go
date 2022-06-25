@@ -11,9 +11,9 @@ import (
 	"go.opentelemetry.io/otel/trace"
 	ottrace "go.opentelemetry.io/otel/trace"
 
-	"github.com/saiya/dsps/server/config"
-	"github.com/saiya/dsps/server/domain"
-	ottesting "github.com/saiya/dsps/server/telemetry/opentelemetry/testing"
+	"github.com/m3dev/dsps/server/config"
+	"github.com/m3dev/dsps/server/domain"
+	ottesting "github.com/m3dev/dsps/server/telemetry/opentelemetry/testing"
 )
 
 func TestEmptyTracing(t *testing.T) {

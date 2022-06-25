@@ -6,7 +6,7 @@ import (
 	"testing"
 
 	"github.com/golang/mock/gomock"
-	dspstesting "github.com/saiya/dsps/server/testing"
+	dspstesting "github.com/m3dev/dsps/server/testing"
 	"github.com/stretchr/testify/assert"
 )
 

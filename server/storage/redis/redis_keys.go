@@ -3,7 +3,7 @@ package redis
 import (
 	"fmt"
 
-	"github.com/saiya/dsps/server/domain"
+	"github.com/m3dev/dsps/server/domain"
 )
 
 type channelKeys struct {

@@ -6,8 +6,8 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/saiya/dsps/server/domain"
-	"github.com/saiya/dsps/server/logger"
+	"github.com/m3dev/dsps/server/domain"
+	"github.com/m3dev/dsps/server/logger"
 )
 
 type multiplexClient struct {

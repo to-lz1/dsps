@@ -4,7 +4,7 @@ import (
 	"context"
 	"sync"
 
-	"github.com/saiya/dsps/server/storage/redis/internal/pubsub"
+	"github.com/m3dev/dsps/server/storage/redis/internal/pubsub"
 )
 
 // RedisPubSubDispatcherStub implements RedisPubSubDispatcher

@@ -8,8 +8,8 @@ import (
 	"go.opentelemetry.io/otel/label"
 	ottrace "go.opentelemetry.io/otel/trace"
 
-	"github.com/saiya/dsps/server/domain"
-	"github.com/saiya/dsps/server/logger"
+	"github.com/m3dev/dsps/server/domain"
+	"github.com/m3dev/dsps/server/logger"
 )
 
 // StartHTTPSpan starts tracing span for incoming or outgoing HTTP call

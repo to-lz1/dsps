@@ -9,8 +9,8 @@ import (
 	"github.com/google/uuid"
 	"github.com/stretchr/testify/assert"
 
-	"github.com/saiya/dsps/server/domain"
-	internal "github.com/saiya/dsps/server/storage/redis/internal"
+	"github.com/m3dev/dsps/server/domain"
+	internal "github.com/m3dev/dsps/server/storage/redis/internal"
 )
 
 func randomChannelID(_ *testing.T) domain.ChannelID {

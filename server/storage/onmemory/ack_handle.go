@@ -7,7 +7,7 @@ import (
 	"encoding/json"
 	"hash/crc32"
 
-	"github.com/saiya/dsps/server/domain"
+	"github.com/m3dev/dsps/server/domain"
 	"golang.org/x/xerrors"
 )
 

@@ -3,9 +3,9 @@ package endpoints
 import (
 	"context"
 
-	"github.com/saiya/dsps/server/http/router"
-	"github.com/saiya/dsps/server/http/utils"
-	"github.com/saiya/dsps/server/logger"
+	"github.com/m3dev/dsps/server/http/router"
+	"github.com/m3dev/dsps/server/http/utils"
+	"github.com/m3dev/dsps/server/logger"
 )
 
 // AdminLoggingEndpointDependency is to inject required objects to the endpoint

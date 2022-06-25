@@ -8,7 +8,7 @@ import (
 	sentrygo "github.com/getsentry/sentry-go"
 	"github.com/stretchr/testify/assert"
 
-	. "github.com/saiya/dsps/server/sentry"
+	. "github.com/m3dev/dsps/server/sentry"
 )
 
 func TestStub(t *testing.T) {

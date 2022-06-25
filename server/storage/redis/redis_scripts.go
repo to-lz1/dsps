@@ -3,7 +3,7 @@ package redis
 import (
 	"context"
 
-	"github.com/saiya/dsps/server/logger"
+	"github.com/m3dev/dsps/server/logger"
 	"golang.org/x/sync/errgroup"
 )
 

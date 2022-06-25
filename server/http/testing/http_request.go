@@ -9,7 +9,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	dspshttp "github.com/saiya/dsps/server/http"
+	dspshttp "github.com/m3dev/dsps/server/http"
 )
 
 // DoHTTPRequest performs HTTP request

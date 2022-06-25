@@ -8,7 +8,7 @@ import (
 	"go.uber.org/zap/zapcore"
 	"golang.org/x/xerrors"
 
-	"github.com/saiya/dsps/server/config"
+	"github.com/m3dev/dsps/server/config"
 )
 
 var rootLoggerLock sync.RWMutex

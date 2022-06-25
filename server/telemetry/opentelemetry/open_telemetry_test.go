@@ -5,14 +5,14 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/saiya/dsps/server/config"
-	ottesting "github.com/saiya/dsps/server/telemetry/opentelemetry/testing"
+	"github.com/m3dev/dsps/server/config"
+	ottesting "github.com/m3dev/dsps/server/telemetry/opentelemetry/testing"
 	"github.com/stretchr/testify/assert"
 	"go.opentelemetry.io/otel"
 	otsdktrace "go.opentelemetry.io/otel/sdk/trace"
 	"go.opentelemetry.io/otel/trace"
 
-	"github.com/saiya/dsps/server/logger"
+	"github.com/m3dev/dsps/server/logger"
 )
 
 func TestOTInitFailure(t *testing.T) {

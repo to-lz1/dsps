@@ -8,9 +8,9 @@ import (
 
 	jwtgo "github.com/dgrijalva/jwt-go/v4"
 
-	"github.com/saiya/dsps/server/config"
-	"github.com/saiya/dsps/server/domain"
-	"github.com/saiya/dsps/server/jwt"
+	"github.com/m3dev/dsps/server/config"
+	"github.com/m3dev/dsps/server/domain"
+	"github.com/m3dev/dsps/server/jwt"
 )
 
 // Template is a template of Validator

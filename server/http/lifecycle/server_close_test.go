@@ -6,8 +6,8 @@ import (
 	"testing"
 	"time"
 
-	. "github.com/saiya/dsps/server/http/lifecycle"
-	. "github.com/saiya/dsps/server/testing"
+	. "github.com/m3dev/dsps/server/http/lifecycle"
+	. "github.com/m3dev/dsps/server/testing"
 	"github.com/stretchr/testify/assert"
 )
 

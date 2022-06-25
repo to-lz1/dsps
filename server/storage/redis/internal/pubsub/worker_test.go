@@ -10,7 +10,7 @@ import (
 	"github.com/go-redis/redis/v8"
 	"github.com/stretchr/testify/assert"
 
-	dspstesting "github.com/saiya/dsps/server/testing"
+	dspstesting "github.com/m3dev/dsps/server/testing"
 )
 
 func TestWorkerHandlerCall(t *testing.T) {

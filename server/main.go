@@ -7,17 +7,17 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/saiya/dsps/server/config"
-	"github.com/saiya/dsps/server/domain"
-	"github.com/saiya/dsps/server/domain/channel"
-	"github.com/saiya/dsps/server/http"
-	httplifecycle "github.com/saiya/dsps/server/http/lifecycle"
-	"github.com/saiya/dsps/server/logger"
-	"github.com/saiya/dsps/server/sentry"
-	"github.com/saiya/dsps/server/storage"
-	"github.com/saiya/dsps/server/storage/deps"
-	"github.com/saiya/dsps/server/telemetry"
-	"github.com/saiya/dsps/server/unix"
+	"github.com/m3dev/dsps/server/config"
+	"github.com/m3dev/dsps/server/domain"
+	"github.com/m3dev/dsps/server/domain/channel"
+	"github.com/m3dev/dsps/server/http"
+	httplifecycle "github.com/m3dev/dsps/server/http/lifecycle"
+	"github.com/m3dev/dsps/server/logger"
+	"github.com/m3dev/dsps/server/sentry"
+	"github.com/m3dev/dsps/server/storage"
+	"github.com/m3dev/dsps/server/storage/deps"
+	"github.com/m3dev/dsps/server/telemetry"
+	"github.com/m3dev/dsps/server/unix"
 )
 
 // Git commit hash or tag
