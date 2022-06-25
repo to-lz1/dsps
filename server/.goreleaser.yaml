@@ -1,8 +1,10 @@
 before:
   hooks:
     - go install github.com/golang/mock/mockgen@latest
+    - go install github.com/Songmu/gocredits/cmd/gocredits@latest
     - go generate ./...
     - go mod tidy
+    - gocredits -w -skip-missing .
 builds:
   - env:
       - CGO_ENABLED=0
@@ -18,6 +20,10 @@ archives:
       windows: Windows
       386: i386
       amd64: x86_64
+    files:
+      - CHANGELOG*
+      - CREDITS
+      - README*
 checksum:
   name_template: 'checksums.txt'
 snapshot:
