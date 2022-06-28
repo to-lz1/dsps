@@ -3,9 +3,9 @@
 ![DSPS Banner](./img/logo/DSPS.svg)
 
 [![MIT License](https://img.shields.io/badge/LICENSE-MIT-brightgreen)](./LICENSE)
-[![Server Test](https://github.com/saiya/dsps/workflows/Server%20Test/badge.svg?1)](https://github.com/saiya/dsps/actions?query=workflow%3A%22Server+Test%22)
-[![Codecov](https://codecov.io/gh/saiya/dsps/branch/main/graph/badge.svg?token=DSSOWMB60X)](https://codecov.io/gh/saiya/dsps)
-[![Go Report Card](https://goreportcard.com/badge/github.com/saiya/dsps?1)](https://goreportcard.com/report/github.com/saiya/dsps)
+[![Server Test](https://github.com/m3dev/dsps/workflows/Server%20Test/badge.svg?1)](https://github.com/m3dev/dsps/actions?query=workflow%3A%22Server+Test%22)
+[![Codecov](https://codecov.io/gh/m3dev/dsps/branch/main/graph/badge.svg)](https://codecov.io/gh/m3dev/dsps)
+[![Go Report Card](https://goreportcard.com/badge/github.com/m3dev/dsps?1)](https://goreportcard.com/report/github.com/m3dev/dsps)
 [![npm version](https://badge.fury.io/js/%40dsps%2Fclient.svg)](https://badge.fury.io/js/%40dsps%2Fclient)
 
 ---
@@ -37,8 +37,8 @@ Note that DSPS does not aim to provide followings:
 ## 3 minutes to getting started with DSPS
 
 ```sh
-# Download & run DSPS server
-docker run --rm -p 3099:3000/tcp saiya/dsps:latest
+# Build & run DSPS server
+docker build . -t dsps-getting-started && docker run --rm -p 3099:3000/tcp dsps-getting-started
 
 #
 # ... Open another terminal window to run following tutorial ...
