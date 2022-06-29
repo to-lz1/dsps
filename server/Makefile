@@ -1,6 +1,6 @@
 SHELL := /bin/bash
 
-release_dir = dsps
+release_dir = dist
 go_module_files = go.mod go.sum
 go_src_files = $(shell find . -type f -name '*.go')
 build_deps = $(go_module_files) $(go_src_files) | $(release_dir)
@@ -33,6 +33,9 @@ lint: generate
 generate:
 	go install github.com/golang/mock/mockgen
 	go generate ./...
+
+$(release_dir):
+	mkdir -p $(release_dir)
 
 $(release_dir)/dsps-Linux-x86_64: $(build_deps)
 	CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o $@ -ldflags "-X main.BuildDist=linux-amd64" -ldflags $(ldflags) main.go
