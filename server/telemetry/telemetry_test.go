@@ -5,7 +5,7 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/saiya/dsps/server/config"
+	"github.com/m3dev/dsps/server/config"
 	"github.com/stretchr/testify/assert"
 )
 

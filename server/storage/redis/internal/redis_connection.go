@@ -6,9 +6,9 @@ import (
 	"github.com/go-redis/redis/extra/redisotel"
 	"github.com/go-redis/redis/v8"
 
-	"github.com/saiya/dsps/server/config"
-	"github.com/saiya/dsps/server/logger"
-	"github.com/saiya/dsps/server/storage/redis/internal/pubsub"
+	"github.com/m3dev/dsps/server/config"
+	"github.com/m3dev/dsps/server/logger"
+	"github.com/m3dev/dsps/server/storage/redis/internal/pubsub"
 )
 
 // RedisConnection represents Redis connection system

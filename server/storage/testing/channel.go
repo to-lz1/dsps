@@ -4,8 +4,8 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/saiya/dsps/server/domain"
-	dspstesting "github.com/saiya/dsps/server/testing"
+	"github.com/m3dev/dsps/server/domain"
+	dspstesting "github.com/m3dev/dsps/server/testing"
 )
 
 // DisabledChannelID is ChannelID that StubChannelProvider always rejects.

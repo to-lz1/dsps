@@ -7,12 +7,12 @@ import (
 
 	sentrygo "github.com/getsentry/sentry-go"
 
-	"github.com/saiya/dsps/server/domain"
-	"github.com/saiya/dsps/server/http/router"
-	"github.com/saiya/dsps/server/http/utils"
-	"github.com/saiya/dsps/server/jwt"
-	"github.com/saiya/dsps/server/logger"
-	"github.com/saiya/dsps/server/sentry"
+	"github.com/m3dev/dsps/server/domain"
+	"github.com/m3dev/dsps/server/http/router"
+	"github.com/m3dev/dsps/server/http/utils"
+	"github.com/m3dev/dsps/server/jwt"
+	"github.com/m3dev/dsps/server/logger"
+	"github.com/m3dev/dsps/server/sentry"
 )
 
 // NormalAuthDependency is to inject required objects to the middleware

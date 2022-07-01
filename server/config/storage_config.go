@@ -3,7 +3,7 @@ package config
 import (
 	"fmt"
 
-	"github.com/saiya/dsps/server/domain"
+	"github.com/m3dev/dsps/server/domain"
 )
 
 // StoragesConfig is list of storage configs

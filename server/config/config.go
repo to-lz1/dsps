@@ -14,7 +14,7 @@ import (
 	"github.com/go-playground/validator/v10"
 	goyaml "github.com/goccy/go-yaml"
 
-	"github.com/saiya/dsps/server/domain"
+	"github.com/m3dev/dsps/server/domain"
 )
 
 // Overrides is to override configuration file.

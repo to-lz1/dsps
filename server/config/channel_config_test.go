@@ -7,8 +7,8 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	. "github.com/saiya/dsps/server/config"
-	. "github.com/saiya/dsps/server/testing"
+	. "github.com/m3dev/dsps/server/config"
+	. "github.com/m3dev/dsps/server/testing"
 )
 
 func TestChannelDefaultConfig(t *testing.T) {

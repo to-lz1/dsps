@@ -7,9 +7,9 @@ import (
 
 	"github.com/natureglobal/realip"
 
-	"github.com/saiya/dsps/server/domain"
-	"github.com/saiya/dsps/server/http/router"
-	"github.com/saiya/dsps/server/sentry"
+	"github.com/m3dev/dsps/server/domain"
+	"github.com/m3dev/dsps/server/http/router"
+	"github.com/m3dev/dsps/server/sentry"
 )
 
 // RealIPDependency is to inject required objects to the middleware

@@ -10,10 +10,10 @@ import (
 	"github.com/golang/mock/gomock"
 	"github.com/stretchr/testify/assert"
 
-	"github.com/saiya/dsps/server/domain"
-	. "github.com/saiya/dsps/server/domain/mock"
-	. "github.com/saiya/dsps/server/http"
-	. "github.com/saiya/dsps/server/http/testing"
+	"github.com/m3dev/dsps/server/domain"
+	. "github.com/m3dev/dsps/server/domain/mock"
+	. "github.com/m3dev/dsps/server/http"
+	. "github.com/m3dev/dsps/server/http/testing"
 )
 
 func TestJwtRevokeWithoutPubSubSupport(t *testing.T) {
@@ -63,7 +63,7 @@ func TestJwtRevokeSuccess(t *testing.T) {
 	})
 }
 
-// Regression of https://github.com/saiya/dsps/pull/54
+// Regression of https://github.com/m3dev/dsps/pull/54
 func TestJwtRevokeLeeway(t *testing.T) {
 	ctx := context.Background()
 	ctrl := gomock.NewController(t)

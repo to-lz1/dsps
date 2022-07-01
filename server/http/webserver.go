@@ -11,11 +11,11 @@ import (
 
 	"github.com/julienschmidt/httprouter"
 
-	"github.com/saiya/dsps/server/config"
-	httplifecycle "github.com/saiya/dsps/server/http/lifecycle"
-	"github.com/saiya/dsps/server/http/middleware"
-	"github.com/saiya/dsps/server/http/router"
-	"github.com/saiya/dsps/server/logger"
+	"github.com/m3dev/dsps/server/config"
+	httplifecycle "github.com/m3dev/dsps/server/http/lifecycle"
+	"github.com/m3dev/dsps/server/http/middleware"
+	"github.com/m3dev/dsps/server/http/router"
+	"github.com/m3dev/dsps/server/logger"
 )
 
 // StartServer starts HTTP web server

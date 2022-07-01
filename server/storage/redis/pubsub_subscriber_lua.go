@@ -7,9 +7,9 @@ import (
 	"github.com/go-redis/redis/v8"
 	"golang.org/x/xerrors"
 
-	"github.com/saiya/dsps/server/domain"
-	"github.com/saiya/dsps/server/logger"
-	internal "github.com/saiya/dsps/server/storage/redis/internal"
+	"github.com/m3dev/dsps/server/domain"
+	"github.com/m3dev/dsps/server/logger"
+	internal "github.com/m3dev/dsps/server/storage/redis/internal"
 )
 
 func (s *redisStorage) loadPubSubSubscriberScripts(ctx context.Context) error {

@@ -6,7 +6,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/saiya/dsps/server/domain"
+	"github.com/m3dev/dsps/server/domain"
 	"golang.org/x/xerrors"
 )
 

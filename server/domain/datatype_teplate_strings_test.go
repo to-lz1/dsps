@@ -6,7 +6,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	. "github.com/saiya/dsps/server/domain"
+	. "github.com/m3dev/dsps/server/domain"
 )
 
 func TestSingleTemplateStringsJSONMapping(t *testing.T) {

@@ -6,7 +6,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	. "github.com/saiya/dsps/server/storage/redis/internal/pubsub"
+	. "github.com/m3dev/dsps/server/storage/redis/internal/pubsub"
 )
 
 func TestResolve(t *testing.T) {

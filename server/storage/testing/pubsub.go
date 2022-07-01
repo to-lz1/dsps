@@ -11,8 +11,8 @@ import (
 	"github.com/google/uuid"
 	"github.com/stretchr/testify/assert"
 
-	"github.com/saiya/dsps/server/domain"
-	dspstesting "github.com/saiya/dsps/server/testing"
+	"github.com/m3dev/dsps/server/domain"
+	dspstesting "github.com/m3dev/dsps/server/testing"
 )
 
 // PubSubTest tests common Storage behaviors

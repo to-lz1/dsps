@@ -5,7 +5,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	. "github.com/saiya/dsps/server/logger"
+	. "github.com/m3dev/dsps/server/logger"
 )
 
 func TestFilter(t *testing.T) {

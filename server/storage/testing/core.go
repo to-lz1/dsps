@@ -6,7 +6,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	domain "github.com/saiya/dsps/server/domain"
+	domain "github.com/m3dev/dsps/server/domain"
 )
 
 // CoreFunctionTest tests common Storage behaviors

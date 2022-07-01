@@ -11,11 +11,11 @@ import (
 	"github.com/julienschmidt/httprouter"
 	"github.com/stretchr/testify/assert"
 
-	. "github.com/saiya/dsps/server/http"
-	. "github.com/saiya/dsps/server/http/middleware"
-	. "github.com/saiya/dsps/server/http/router"
-	. "github.com/saiya/dsps/server/http/testing"
-	"github.com/saiya/dsps/server/sentry"
+	. "github.com/m3dev/dsps/server/http"
+	. "github.com/m3dev/dsps/server/http/middleware"
+	. "github.com/m3dev/dsps/server/http/router"
+	. "github.com/m3dev/dsps/server/http/testing"
+	"github.com/m3dev/dsps/server/sentry"
 )
 
 func TestSentryMiddleware(t *testing.T) {

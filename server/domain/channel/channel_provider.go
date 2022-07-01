@@ -5,10 +5,10 @@ import (
 
 	"golang.org/x/xerrors"
 
-	"github.com/saiya/dsps/server/config"
-	"github.com/saiya/dsps/server/domain"
-	"github.com/saiya/dsps/server/sentry"
-	"github.com/saiya/dsps/server/telemetry"
+	"github.com/m3dev/dsps/server/config"
+	"github.com/m3dev/dsps/server/domain"
+	"github.com/m3dev/dsps/server/sentry"
+	"github.com/m3dev/dsps/server/telemetry"
 )
 
 // ProviderDeps contains objects required by ChannelProvider

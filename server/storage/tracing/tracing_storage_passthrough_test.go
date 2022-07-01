@@ -8,11 +8,11 @@ import (
 	"github.com/golang/mock/gomock"
 	"github.com/stretchr/testify/assert"
 
-	"github.com/saiya/dsps/server/domain"
-	. "github.com/saiya/dsps/server/domain/mock"
-	. "github.com/saiya/dsps/server/storage/deps/testing"
-	. "github.com/saiya/dsps/server/storage/tracing"
-	"github.com/saiya/dsps/server/telemetry"
+	"github.com/m3dev/dsps/server/domain"
+	. "github.com/m3dev/dsps/server/domain/mock"
+	. "github.com/m3dev/dsps/server/storage/deps/testing"
+	. "github.com/m3dev/dsps/server/storage/tracing"
+	"github.com/m3dev/dsps/server/telemetry"
 )
 
 func withMockedStorage(t *testing.T, ctrl *gomock.Controller, f func(st domain.Storage, s *MockStorage)) {

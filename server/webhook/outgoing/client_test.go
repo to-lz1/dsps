@@ -14,9 +14,9 @@ import (
 	"github.com/stretchr/testify/assert"
 	"go.opentelemetry.io/otel/trace"
 
-	"github.com/saiya/dsps/server/domain"
-	"github.com/saiya/dsps/server/sentry"
-	"github.com/saiya/dsps/server/telemetry"
+	"github.com/m3dev/dsps/server/domain"
+	"github.com/m3dev/dsps/server/sentry"
+	"github.com/m3dev/dsps/server/telemetry"
 )
 
 func newClientAndServerByConfig(t *testing.T, handler http.Handler, tplEnv domain.TemplateStringEnv, config string, h func(client *clientImpl)) {

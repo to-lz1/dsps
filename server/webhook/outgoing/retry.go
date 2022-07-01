@@ -14,9 +14,9 @@ import (
 	sentrygo "github.com/getsentry/sentry-go"
 	"golang.org/x/xerrors"
 
-	"github.com/saiya/dsps/server/config"
-	"github.com/saiya/dsps/server/logger"
-	"github.com/saiya/dsps/server/sentry"
+	"github.com/m3dev/dsps/server/config"
+	"github.com/m3dev/dsps/server/logger"
+	"github.com/m3dev/dsps/server/sentry"
 )
 
 type retry struct {

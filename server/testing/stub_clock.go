@@ -4,7 +4,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/saiya/dsps/server/domain"
+	"github.com/m3dev/dsps/server/domain"
 )
 
 // StubClock extends domain.SystemClock interface for testing purpose.

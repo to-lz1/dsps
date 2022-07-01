@@ -7,7 +7,7 @@ import (
 
 	"github.com/go-redis/redis/v8"
 
-	"github.com/saiya/dsps/server/storage/redis/internal/pubsub"
+	"github.com/m3dev/dsps/server/storage/redis/internal/pubsub"
 )
 
 //go:generate mockgen -source=${GOFILE} -package=mock -destination=./mock/${GOFILE}

@@ -6,10 +6,10 @@ import (
 
 	"golang.org/x/xerrors"
 
-	"github.com/saiya/dsps/server/config"
-	"github.com/saiya/dsps/server/domain"
-	jwtv "github.com/saiya/dsps/server/jwt/validator"
-	"github.com/saiya/dsps/server/webhook/outgoing"
+	"github.com/m3dev/dsps/server/config"
+	"github.com/m3dev/dsps/server/domain"
+	jwtv "github.com/m3dev/dsps/server/jwt/validator"
+	"github.com/m3dev/dsps/server/webhook/outgoing"
 )
 
 // channelAtom is an Channel implementation corresponds to a ChannelConfiguration

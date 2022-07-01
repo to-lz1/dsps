@@ -9,7 +9,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	storagetesting "github.com/saiya/dsps/server/storage/deps/testing"
+	storagetesting "github.com/m3dev/dsps/server/storage/deps/testing"
 )
 
 func TestDispatcherParams(t *testing.T) {

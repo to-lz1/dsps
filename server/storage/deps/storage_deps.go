@@ -1,8 +1,8 @@
 package deps
 
 import (
-	"github.com/saiya/dsps/server/sentry"
-	"github.com/saiya/dsps/server/telemetry"
+	"github.com/m3dev/dsps/server/sentry"
+	"github.com/m3dev/dsps/server/telemetry"
 )
 
 // StorageDeps contains objects required by storage implementations.

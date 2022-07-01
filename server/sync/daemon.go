@@ -10,8 +10,8 @@ import (
 
 	"golang.org/x/sync/errgroup"
 
-	"github.com/saiya/dsps/server/sentry"
-	"github.com/saiya/dsps/server/telemetry"
+	"github.com/m3dev/dsps/server/sentry"
+	"github.com/m3dev/dsps/server/telemetry"
 )
 
 // DaemonSystem represents controller of daemons

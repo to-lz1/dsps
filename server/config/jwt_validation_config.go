@@ -3,8 +3,8 @@ package config
 import (
 	"fmt"
 
-	"github.com/saiya/dsps/server/domain"
-	jwtpkg "github.com/saiya/dsps/server/jwt"
+	"github.com/m3dev/dsps/server/domain"
+	jwtpkg "github.com/m3dev/dsps/server/jwt"
 )
 
 // JwtValidationConfig is JWT configuration of a channel

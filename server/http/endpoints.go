@@ -3,11 +3,11 @@ package http
 import (
 	"context"
 
-	"github.com/saiya/dsps/server/domain"
-	"github.com/saiya/dsps/server/http/endpoints"
-	"github.com/saiya/dsps/server/http/middleware"
-	"github.com/saiya/dsps/server/http/router"
-	"github.com/saiya/dsps/server/logger"
+	"github.com/m3dev/dsps/server/domain"
+	"github.com/m3dev/dsps/server/http/endpoints"
+	"github.com/m3dev/dsps/server/http/middleware"
+	"github.com/m3dev/dsps/server/http/router"
+	"github.com/m3dev/dsps/server/logger"
 )
 
 // InitEndpoints registers endpoints of the DSPS server

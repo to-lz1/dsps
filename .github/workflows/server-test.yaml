@@ -22,10 +22,11 @@ jobs:
           go mod download
           make generate
       - name: golangci-lint
-        uses: golangci/golangci-lint-action@v2
+        uses: golangci/golangci-lint-action@v3
         with:
           version: v1.46.2
           working-directory: server
+          skip-pkg-cache: true
       - name: Other Lint
         shell: bash
         working-directory: server
@@ -96,8 +97,10 @@ jobs:
         with:
           go-version: ${{ env.go-version }}
       - name: build
-        shell: bash
-        working-directory: server
-        run: |
-          go mod download
-          make build
+        uses: goreleaser/goreleaser-action@v2
+        with:
+          version: latest
+          workdir: server
+          args: build --rm-dist --snapshot
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

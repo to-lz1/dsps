@@ -6,7 +6,7 @@ import (
 	exporttrace "go.opentelemetry.io/otel/sdk/export/trace"
 	"golang.org/x/xerrors"
 
-	"github.com/saiya/dsps/server/config"
+	"github.com/m3dev/dsps/server/config"
 )
 
 func newExporters(config *config.OpenTelemetryConfig) ([]exporttrace.SpanExporter, error) {

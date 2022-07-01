@@ -10,9 +10,9 @@ import (
 
 	"go.opentelemetry.io/otel/trace"
 
-	"github.com/saiya/dsps/server/sentry"
-	. "github.com/saiya/dsps/server/sync"
-	"github.com/saiya/dsps/server/telemetry"
+	"github.com/m3dev/dsps/server/sentry"
+	. "github.com/m3dev/dsps/server/sync"
+	"github.com/m3dev/dsps/server/telemetry"
 	"github.com/stretchr/testify/assert"
 )
 

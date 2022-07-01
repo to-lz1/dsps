@@ -7,8 +7,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/saiya/dsps/server/domain"
-	"github.com/saiya/dsps/server/logger"
+	"github.com/m3dev/dsps/server/domain"
+	"github.com/m3dev/dsps/server/logger"
 )
 
 const parallelFetchEarlyReturnWindow = 300 * time.Millisecond

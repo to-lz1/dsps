@@ -7,9 +7,9 @@ import (
 	"github.com/stretchr/testify/assert"
 	"go.opentelemetry.io/otel/trace"
 
-	. "github.com/saiya/dsps/server/http"
-	. "github.com/saiya/dsps/server/http/testing"
-	"github.com/saiya/dsps/server/telemetry"
+	. "github.com/m3dev/dsps/server/http"
+	. "github.com/m3dev/dsps/server/http/testing"
+	"github.com/m3dev/dsps/server/telemetry"
 )
 
 func TestTracingMiddleware(t *testing.T) {

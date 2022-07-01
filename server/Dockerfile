@@ -3,7 +3,7 @@ ARG DSPS_VERSION_ID=""
 WORKDIR /go/src/github.com/dsps/server
 COPY . .
 RUN go install && go install github.com/Songmu/gocredits/cmd/gocredits
-RUN make dsps/dsps-$(uname -o | sed 's/GNU\///')-$(uname -m) && mv dsps/dsps-$(uname -o | sed 's/GNU\///')-$(uname -m) /dsps.bin
+RUN make dist/dsps-$(uname -o | sed 's/GNU\///')-$(uname -m) && mv dist/dsps-$(uname -o | sed 's/GNU\///')-$(uname -m) /dsps.bin
 
 FROM alpine:3.12.3
 # Add some utilities for convinience: gettext (contains envsubst), curl, jq

@@ -8,8 +8,8 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	. "github.com/saiya/dsps/server/sync"
-	. "github.com/saiya/dsps/server/testing"
+	. "github.com/m3dev/dsps/server/sync"
+	. "github.com/m3dev/dsps/server/testing"
 )
 
 func TestLock(t *testing.T) {

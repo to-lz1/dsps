@@ -6,7 +6,7 @@ import (
 	"context"
 	"syscall"
 
-	"github.com/saiya/dsps/server/logger"
+	"github.com/m3dev/dsps/server/logger"
 )
 
 // NotifyUlimit generate warn logs if requirements not met.

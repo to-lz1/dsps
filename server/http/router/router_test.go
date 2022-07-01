@@ -9,9 +9,9 @@ import (
 	"github.com/julienschmidt/httprouter"
 	"github.com/stretchr/testify/assert"
 
-	. "github.com/saiya/dsps/server/http/router"
-	. "github.com/saiya/dsps/server/http/testing"
-	"github.com/saiya/dsps/server/http/utils"
+	. "github.com/m3dev/dsps/server/http/router"
+	. "github.com/m3dev/dsps/server/http/testing"
+	"github.com/m3dev/dsps/server/http/utils"
 )
 
 func TestRouterHTTPMethods(t *testing.T) {

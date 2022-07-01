@@ -6,14 +6,14 @@ import (
 
 	"golang.org/x/xerrors"
 
-	"github.com/saiya/dsps/server/config"
-	"github.com/saiya/dsps/server/domain"
-	"github.com/saiya/dsps/server/logger"
-	"github.com/saiya/dsps/server/storage/deps"
-	"github.com/saiya/dsps/server/storage/multiplex"
-	"github.com/saiya/dsps/server/storage/onmemory"
-	"github.com/saiya/dsps/server/storage/redis"
-	"github.com/saiya/dsps/server/storage/tracing"
+	"github.com/m3dev/dsps/server/config"
+	"github.com/m3dev/dsps/server/domain"
+	"github.com/m3dev/dsps/server/logger"
+	"github.com/m3dev/dsps/server/storage/deps"
+	"github.com/m3dev/dsps/server/storage/multiplex"
+	"github.com/m3dev/dsps/server/storage/onmemory"
+	"github.com/m3dev/dsps/server/storage/redis"
+	"github.com/m3dev/dsps/server/storage/tracing"
 )
 
 // NewStorage initialize Storage instance as per given config

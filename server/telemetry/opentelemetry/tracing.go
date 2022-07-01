@@ -10,7 +10,7 @@ import (
 	sdktrace "go.opentelemetry.io/otel/sdk/trace"
 	ottrace "go.opentelemetry.io/otel/trace"
 
-	"github.com/saiya/dsps/server/config"
+	"github.com/m3dev/dsps/server/config"
 )
 
 // Tracing contains OT tracing resources
@@ -39,7 +39,7 @@ func newTracing(config *config.OpenTelemetryTracingConfig, injection tracingInje
 			wrapTraceExporters(config, setup.exporters),
 			sdktrace.WithResource(setup.resource),
 		)...)
-		setup.Tracer = setup.traceProvider.Tracer("github.com/saiya/dsps")
+		setup.Tracer = setup.traceProvider.Tracer("github.com/m3dev/dsps")
 
 		// Set global settings
 		otel.SetTracerProvider(setup.traceProvider)

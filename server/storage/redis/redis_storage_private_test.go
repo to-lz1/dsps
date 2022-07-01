@@ -9,13 +9,13 @@ import (
 	"github.com/golang/mock/gomock"
 	"github.com/stretchr/testify/assert"
 
-	"github.com/saiya/dsps/server/domain"
-	. "github.com/saiya/dsps/server/storage/redis/internal"
-	. "github.com/saiya/dsps/server/storage/redis/internal/mock"
-	"github.com/saiya/dsps/server/storage/redis/internal/pubsub"
-	. "github.com/saiya/dsps/server/storage/redis/internal/pubsub"
-	. "github.com/saiya/dsps/server/storage/redis/internal/pubsub/stub"
-	storagetesting "github.com/saiya/dsps/server/storage/testing"
+	"github.com/m3dev/dsps/server/domain"
+	. "github.com/m3dev/dsps/server/storage/redis/internal"
+	. "github.com/m3dev/dsps/server/storage/redis/internal/mock"
+	"github.com/m3dev/dsps/server/storage/redis/internal/pubsub"
+	. "github.com/m3dev/dsps/server/storage/redis/internal/pubsub"
+	. "github.com/m3dev/dsps/server/storage/redis/internal/pubsub/stub"
+	storagetesting "github.com/m3dev/dsps/server/storage/testing"
 )
 
 func GetRedisAddr(_ *testing.T) string {

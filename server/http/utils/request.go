@@ -4,7 +4,7 @@ import (
 	"context"
 	"regexp"
 
-	"github.com/saiya/dsps/server/http/router"
+	"github.com/m3dev/dsps/server/http/router"
 )
 
 var bearerTokenRegex = regexp.MustCompile("^Bearer ")

@@ -3,9 +3,9 @@ package testing
 import (
 	"testing"
 
-	"github.com/saiya/dsps/server/sentry"
-	"github.com/saiya/dsps/server/storage/deps"
-	"github.com/saiya/dsps/server/telemetry"
+	"github.com/m3dev/dsps/server/sentry"
+	"github.com/m3dev/dsps/server/storage/deps"
+	"github.com/m3dev/dsps/server/telemetry"
 )
 
 // EmptyDeps fills stub objects

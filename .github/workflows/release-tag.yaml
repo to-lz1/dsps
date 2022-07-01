@@ -5,107 +5,43 @@ on:
       - 'v*'
 
 jobs:
-  docker-images:
-    name: Publish docker images
+  goreleaser:
     runs-on: ubuntu-latest
     steps:
-      - id: get-tag
-        run: |
-          tag=$(echo "${{github.ref}}" | sed 's/^refs\/tags\/v//')
-          echo "::set-output name=tag::$tag"
       - name: Checkout
-        uses: actions/checkout@v2
-      - name: Set up QEMU
-        uses: docker/setup-qemu-action@v1
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v1
-      - name: Login to DockerHub
-        uses: docker/login-action@v1
+        uses: actions/checkout@v3
+      - name: Setup Go
+        uses: actions/setup-go@v3
         with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
-      - name: Build and push
-        uses: docker/build-push-action@v2
+          go-version: 1.18.3
+      - name: Run GoReleaser
+        uses: goreleaser/goreleaser-action@v2
         with:
-          context: ./server
-          file: ./server/Dockerfile  # file is not relative to context https://github.com/docker/build-push-action/issues/51#issuecomment-702506036
-          platforms: linux/amd64,linux/arm64
-          push: true
-          tags: saiya/dsps:${{ steps.get-tag.outputs.tag }}
-          build-args: |
-              DSPS_VERSION_ID=${{ steps.get-tag.outputs.tag }}
-
-  js-client-npm-release:
-    name: Publish JS client
-    runs-on: ubuntu-latest
-    steps:
-      - id: get-version
-        run: |
-          version=$(echo "${{github.ref}}" | sed 's/^refs\/tags\/v//')
-          echo "::set-output name=version::$version"
-      - name: Checkout
-        uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-        with:
-          node-version: '12.x'
-          registry-url: 'https://registry.npmjs.org'
-          scope: '@dsps'
-      - name: Yarn publish
-        run: |
-          yarn install --frozen-lockfile
-          yarn publish --frozen-lockfile --non-interactive --new-version ${{ steps.get-version.outputs.version }} --no-git-tag-version
-        working-directory: client/js
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-
-  github-release:
-    name: Create GitHub release
-    runs-on: ubuntu-latest
-    steps:
-      - id: get-tag
-        run: |
-          tag=$(echo "${{github.ref}}" | sed 's/^refs\/tags\/v//')
-          echo "::set-output name=tag::$tag"
-      - uses: actions/checkout@v2
-      - uses: actions/setup-go@v2
-        with:
-          go-version: '1.18.3'
-      - name: Build
-        run: |
-          go install
-          make build
-        working-directory: server
-        env:
-          DSPS_VERSION_ID: ${{ steps.get-tag.outputs.tag }}
-
-      # https://zenn.dev/seita/articles/d1dba77043be8fd50eeb
-      - name: Get the version
-        id: get_version
-        run: echo ::set-output name=VERSION::${GITHUB_REF#refs/tags/}
-      - name: Get commit summary
-        id: get_commit_summary
-        run: |
-          PREVIOUS_TAG=$(git tag --sort=-creatordate | sed -n 2p)
-          echo "PREVIOUS_TAG: $PREVIOUS_TAG"
-          COMMIT_SUMMARY="$(git log --oneline --pretty=tformat:"%h %s" $PREVIOUS_TAG..${{ github.ref }})"
-          COMMIT_SUMMARY="${COMMIT_SUMMARY//$'\n'/'%0A'}"
-          echo ::set-output name=COMMIT_SUMMARY::$COMMIT_SUMMARY
-
-      - id: create_release
-        uses: actions/create-release@v1
+          version: latest
+          workdir: server
+          args: release --rm-dist
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: ${{ github.ref }}
-          release_name: Release ${{ github.ref }}
-          body: ${{ steps.get_commit_summary.outputs.COMMIT_SUMMARY }}
-          draft: true
-          prerelease: true
-      - uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./server/dsps.zip
-          asset_name: dsps.zip
-          asset_content_type: application/zip
+
+  # js-client-npm-release:
+  #   name: Publish JS client
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - id: get-version
+  #       run: |
+  #         version=$(echo "${{github.ref}}" | sed 's/^refs\/tags\/v//')
+  #         echo "::set-output name=version::$version"
+  #     - name: Checkout
+  #       uses: actions/checkout@v2
+  #     - uses: actions/setup-node@v1
+  #       with:
+  #         node-version: '12.x'
+  #         registry-url: 'https://registry.npmjs.org'
+  #         scope: '@dsps'
+  #     - name: Yarn publish
+  #       run: |
+  #         yarn install --frozen-lockfile
+  #         yarn publish --frozen-lockfile --non-interactive --new-version ${{ steps.get-version.outputs.version }} --no-git-tag-version
+  #       working-directory: client/js
+  #       env:
+  #         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

@@ -10,14 +10,14 @@ import (
 	"github.com/golang/mock/gomock"
 	"github.com/stretchr/testify/assert"
 
-	"github.com/saiya/dsps/server/config"
-	"github.com/saiya/dsps/server/domain"
-	. "github.com/saiya/dsps/server/domain/mock"
-	. "github.com/saiya/dsps/server/storage/deps/testing"
-	. "github.com/saiya/dsps/server/storage/multiplex"
-	"github.com/saiya/dsps/server/storage/onmemory"
-	. "github.com/saiya/dsps/server/storage/testing"
-	. "github.com/saiya/dsps/server/testing"
+	"github.com/m3dev/dsps/server/config"
+	"github.com/m3dev/dsps/server/domain"
+	. "github.com/m3dev/dsps/server/domain/mock"
+	. "github.com/m3dev/dsps/server/storage/deps/testing"
+	. "github.com/m3dev/dsps/server/storage/multiplex"
+	"github.com/m3dev/dsps/server/storage/onmemory"
+	. "github.com/m3dev/dsps/server/storage/testing"
+	. "github.com/m3dev/dsps/server/testing"
 )
 
 func TestLongPollingEarlyReturn(t *testing.T) {

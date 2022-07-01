@@ -7,10 +7,10 @@ import (
 	"time"
 
 	"github.com/go-redis/redis/v8"
-	"github.com/saiya/dsps/server/logger"
-	"github.com/saiya/dsps/server/sentry"
-	"github.com/saiya/dsps/server/storage/deps"
-	"github.com/saiya/dsps/server/telemetry"
+	"github.com/m3dev/dsps/server/logger"
+	"github.com/m3dev/dsps/server/sentry"
+	"github.com/m3dev/dsps/server/storage/deps"
+	"github.com/m3dev/dsps/server/telemetry"
 )
 
 // RedisPubSubDispatcher subscribe Redis PubSub with PSUBSCRIBE (wildcard subscription), then broadcast message to redisPubsubAwaiter.

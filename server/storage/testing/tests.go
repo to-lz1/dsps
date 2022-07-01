@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	domain "github.com/saiya/dsps/server/domain"
+	domain "github.com/m3dev/dsps/server/domain"
 )
 
 // StorageCtor should construct Storage instance to test

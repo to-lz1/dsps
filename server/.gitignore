@@ -1,7 +1,8 @@
-/dsps.zip
-
 /coverage*
 /pprof
 
 # Temporary file in Makefile
 /go.mod.bak
+
+dist/
+CREDITS

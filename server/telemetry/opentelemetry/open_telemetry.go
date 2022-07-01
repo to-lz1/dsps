@@ -10,8 +10,8 @@ import (
 	ottrace "go.opentelemetry.io/otel/trace"
 	"golang.org/x/sync/errgroup"
 
-	"github.com/saiya/dsps/server/config"
-	"github.com/saiya/dsps/server/logger"
+	"github.com/m3dev/dsps/server/config"
+	"github.com/m3dev/dsps/server/logger"
 )
 
 // OTFacility holds OT related objects

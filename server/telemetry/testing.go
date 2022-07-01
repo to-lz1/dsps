@@ -6,9 +6,9 @@ import (
 
 	otsdktrace "go.opentelemetry.io/otel/sdk/trace"
 
-	"github.com/saiya/dsps/server/config"
-	"github.com/saiya/dsps/server/telemetry/opentelemetry"
-	ottesting "github.com/saiya/dsps/server/telemetry/opentelemetry/testing"
+	"github.com/m3dev/dsps/server/config"
+	"github.com/m3dev/dsps/server/telemetry/opentelemetry"
+	ottesting "github.com/m3dev/dsps/server/telemetry/opentelemetry/testing"
 	"github.com/stretchr/testify/assert"
 )
 

@@ -3,9 +3,9 @@ package endpoints
 import (
 	"context"
 
-	"github.com/saiya/dsps/server/domain"
-	"github.com/saiya/dsps/server/http/router"
-	"github.com/saiya/dsps/server/http/utils"
+	"github.com/m3dev/dsps/server/domain"
+	"github.com/m3dev/dsps/server/http/router"
+	"github.com/m3dev/dsps/server/http/utils"
 )
 
 // AdminJwtEndpointDependency is to inject required objects to the endpoint
@@ -35,7 +35,7 @@ func InitAdminJwtEndpoints(adminRouter *router.Router, deps AdminJwtEndpointDepe
 			utils.SendInvalidParameter(ctx, args.W, "exp", err)
 			return
 		}
-		// Add clock skew leeway to prevent timing attack: https://github.com/saiya/dsps/pull/54
+		// Add clock skew leeway to prevent timing attack: https://github.com/m3dev/dsps/pull/54
 		exp = domain.JwtExp(exp.Time().Add(cp.JWTClockSkewLeewayMax().Duration))
 
 		if err := storage.RevokeJwt(ctx, exp, domain.JwtJti(jti)); err != nil {
