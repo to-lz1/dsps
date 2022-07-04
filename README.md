@@ -5,7 +5,7 @@
 [![MIT License](https://img.shields.io/badge/LICENSE-MIT-brightgreen)](./LICENSE)
 [![Server Test](https://github.com/m3dev/dsps/workflows/Server%20Test/badge.svg?1)](https://github.com/m3dev/dsps/actions?query=workflow%3A%22Server+Test%22)
 [![Codecov](https://codecov.io/gh/m3dev/dsps/branch/main/graph/badge.svg)](https://codecov.io/gh/m3dev/dsps)
-[![Go Report Card](https://goreportcard.com/badge/github.com/m3dev/dsps?1)](https://goreportcard.com/report/github.com/m3dev/dsps)
+[![Go Report Card](https://goreportcard.com/badge/github.com/m3dev/dsps/server)](https://goreportcard.com/report/github.com/m3dev/dsps/server)
 [![npm version](https://badge.fury.io/js/%40dsps%2Fclient.svg)](https://badge.fury.io/js/%40dsps%2Fclient)
 
 ---
