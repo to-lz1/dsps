@@ -5,7 +5,6 @@ import (
 	"encoding/json"
 	"fmt"
 	"io"
-	"io/ioutil"
 	"os"
 	"strconv"
 	"strings"
@@ -57,9 +56,9 @@ func LoadConfigFile(ctx context.Context, configFile string, configOverrides Over
 	case "":
 		yamlBytes = []byte("")
 	case "-":
-		yamlBytes, err = ioutil.ReadAll(os.Stdin)
+		yamlBytes, err = io.ReadAll(os.Stdin)
 	default:
-		yamlBytes, err = ioutil.ReadFile(configFile) //nolint:gosec // Disables G304: Potential file inclusion via variable
+		yamlBytes, err = os.ReadFile(configFile) //nolint:gosec // Disables G304: Potential file inclusion via variable
 	}
 	if err != nil {
 		return ServerConfig{}, err

@@ -2,7 +2,8 @@ package validator_test
 
 import (
 	"context"
-	"io/ioutil"
+	"os"
+
 	"testing"
 	"time"
 
@@ -38,12 +39,12 @@ func TestPregeneratedJwt(t *testing.T) {
 	v := createDefaultValidator(t)
 
 	// Valid JWT
-	jwt, err := ioutil.ReadFile("../testdata/RS256-2048bit.jwt")
+	jwt, err := os.ReadFile("../testdata/RS256-2048bit.jwt")
 	assert.NoError(t, err)
 	assert.NoError(t, v.Validate(ctx, string(jwt)))
 
 	// Expired JWT
-	jwt, err = ioutil.ReadFile("../testdata/RS256-2048bit-expired.jwt")
+	jwt, err = os.ReadFile("../testdata/RS256-2048bit-expired.jwt")
 	assert.NoError(t, err)
 	err = v.Validate(ctx, string(jwt))
 	assert.Error(t, err)

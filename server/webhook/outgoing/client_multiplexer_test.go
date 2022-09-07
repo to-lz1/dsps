@@ -4,7 +4,7 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
-	"io/ioutil"
+	"io"
 	"net/http"
 	"net/http/httptest"
 	"sync"
@@ -21,7 +21,7 @@ func TestNewMultiplexClient(t *testing.T) {
 	received := []domain.Message{}
 	responseCodes := []int{}
 	server := httptest.NewServer(http.HandlerFunc(func(rw http.ResponseWriter, r *http.Request) {
-		bytes, err := ioutil.ReadAll(r.Body)
+		bytes, err := io.ReadAll(r.Body)
 		assert.NoError(t, err)
 		var msg domain.Message
 		assert.NoError(t, json.Unmarshal(bytes, &msg))

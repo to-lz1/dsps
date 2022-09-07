@@ -4,7 +4,6 @@ import (
 	"context"
 	"fmt"
 	"io"
-	"io/ioutil"
 	"math"
 	"math/rand"
 	"net/http"
@@ -65,7 +64,7 @@ func (r *retry) Do(ctx context.Context, sentryInstance sentry.Sentry, descriptio
 		}
 		if res != nil {
 			// Should read all response body otherwise disrupts keep-alive.
-			if _, copyErr := io.Copy(ioutil.Discard, res.Body); copyErr != nil {
+			if _, copyErr := io.Copy(io.Discard, res.Body); copyErr != nil {
 				logger.Of(ctx).Debugf(logger.CatOutgoingWebhook, "failed to read response body: %w", copyErr)
 			}
 			if closeErr := res.Body.Close(); closeErr != nil {

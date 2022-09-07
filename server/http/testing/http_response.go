@@ -2,7 +2,7 @@ package testing
 
 import (
 	"encoding/json"
-	"io/ioutil"
+	"io"
 	"net/http"
 	"testing"
 
@@ -52,7 +52,7 @@ func BodyJSONMapOfRes(t *testing.T, res *http.Response) map[string]interface{} {
 func BodyJSONOfRes(t *testing.T, res *http.Response, body interface{}) {
 	assert.Regexp(t, "application/json(;|$)", res.Header.Get("Content-Type"))
 
-	raw, err := ioutil.ReadAll(res.Body)
+	raw, err := io.ReadAll(res.Body)
 	assert.NoError(t, err)
 	assert.NoError(t, res.Body.Close())
 	assert.NoError(t, json.Unmarshal(raw, body), "failed to parse response JSON: %s", string(raw))

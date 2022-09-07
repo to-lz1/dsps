@@ -2,7 +2,7 @@ package jwt
 
 import (
 	"fmt"
-	"io/ioutil"
+	"os"
 
 	jwtgo "github.com/dgrijalva/jwt-go/v4"
 
@@ -27,7 +27,7 @@ func LoadKey(alg domain.JwtAlg, keyFilePath string, privateKey bool) (interface{
 	}
 
 	parserWrapper := func(f func(bytes []byte) (interface{}, error)) (interface{}, error) {
-		bytes, err := ioutil.ReadFile(keyFilePath) //nolint:gosec // Only loads file specified by server configuration file
+		bytes, err := os.ReadFile(keyFilePath) //nolint:gosec // Only loads file specified by server configuration file
 		if err != nil {
 			return nil, fmt.Errorf(`failed to read JWT key file "%s": %w`, keyFilePath, err)
 		}

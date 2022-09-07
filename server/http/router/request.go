@@ -1,7 +1,7 @@
 package router
 
 import (
-	"io/ioutil"
+	"io"
 	"net/http"
 )
 
@@ -14,7 +14,7 @@ type Request struct {
 func (req Request) ReadBody() ([]byte, error) {
 	// > The Server will close the request body. The ServeHTTP Handler does not need to.
 	// https://golang.org/pkg/net/http/#ResponseWriter
-	return ioutil.ReadAll(req.Body)
+	return io.ReadAll(req.Body)
 }
 
 // GetQueryParam returns URL query parameter or ""

@@ -4,7 +4,7 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
-	"io/ioutil"
+	"io"
 	"net/http"
 	"net/http/httptest"
 	"net/url"
@@ -52,7 +52,7 @@ func TestClientImpl(t *testing.T) {
 		assert.Equal(t, `My DSPS server`, r.Header.Get("User-Agent"))
 		assert.Equal(t, `1234`, r.Header.Get("X-Room-ID"))
 
-		body, err := ioutil.ReadAll(r.Body)
+		body, err := io.ReadAll(r.Body)
 		assert.NoError(t, err)
 		assert.Equal(t, fmt.Sprintf("%d", len(body)), r.Header.Get("Content-Length"))
 		assert.NoError(t, json.Unmarshal(body, &received))
@@ -63,9 +63,9 @@ func TestClientImpl(t *testing.T) {
 		map[string]interface{}{"channel": map[string]string{"id": "1234"}},
 		`{
 			"method": "PUT",
-			"url": "${BASE_URL}/you-got-message/room/{{.channel.id}}", 
+			"url": "${BASE_URL}/you-got-message/room/{{.channel.id}}",
 			"timeout": "3s",
-			"headers": { 
+			"headers": {
 				"User-Agent": "My DSPS server",
 				"X-Room-ID": "{{.channel.id}}"
 			}
@@ -93,7 +93,7 @@ func TestClientTracing(t *testing.T) {
 		assert.Equal(t, `My DSPS server`, r.Header.Get("User-Agent"))
 		assert.Equal(t, `1234`, r.Header.Get("X-Room-ID"))
 
-		body, err := ioutil.ReadAll(r.Body)
+		body, err := io.ReadAll(r.Body)
 		assert.NoError(t, err)
 		assert.Equal(t, fmt.Sprintf("%d", len(body)), r.Header.Get("Content-Length"))
 		assert.NoError(t, json.Unmarshal(body, &received))
@@ -106,9 +106,9 @@ func TestClientTracing(t *testing.T) {
 			map[string]interface{}{"channel": map[string]string{"id": "1234"}},
 			`{
 				"method": "PUT",
-				"url": "${BASE_URL}/you-got-message/room/{{.channel.id}}", 
+				"url": "${BASE_URL}/you-got-message/room/{{.channel.id}}",
 				"timeout": "3s",
-				"headers": { 
+				"headers": {
 					"User-Agent": "My DSPS server",
 					"X-Room-ID": "{{.channel.id}}"
 				}
@@ -156,7 +156,7 @@ func TestClientRetry(t *testing.T) {
 		assert.Equal(t, "PUT", r.Method)
 		assert.Equal(t, `/you-got-message/room/1234`, r.URL.Path)
 
-		body, err := ioutil.ReadAll(r.Body)
+		body, err := io.ReadAll(r.Body)
 		assert.NoError(t, err)
 		assert.NoError(t, json.Unmarshal(body, &received))
 	}
@@ -166,7 +166,7 @@ func TestClientRetry(t *testing.T) {
 		handler,
 		map[string]interface{}{"channel": map[string]string{"id": "1234"}},
 		`{
-			"url": "${BASE_URL}/you-got-message/room/{{.channel.id}}", 
+			"url": "${BASE_URL}/you-got-message/room/{{.channel.id}}",
 			"retry": {
 				"count": 3,
 				"interval": "1ms",
@@ -209,7 +209,7 @@ func TestClientRetryFailure(t *testing.T) {
 		handler,
 		map[string]interface{}{"channel": map[string]string{"id": "1234"}},
 		`{
-			"url": "${BASE_URL}/you-got-message/room/{{.channel.id}}", 
+			"url": "${BASE_URL}/you-got-message/room/{{.channel.id}}",
 			"retry": {
 				"count": 3,
 				"interval": "1ms",

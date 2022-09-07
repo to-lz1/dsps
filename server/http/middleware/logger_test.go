@@ -4,7 +4,7 @@ import (
 	"context"
 	"errors"
 	"fmt"
-	"io/ioutil"
+	"io"
 	"net/http"
 	"net/http/httptest"
 	"testing"
@@ -132,7 +132,7 @@ func TestPanicHandling(t *testing.T) {
 		logger.WithTestLogger(t, nil, func(lc *logger.LogCapture) {
 			res := DoHTTPRequest(t, "GET", server.URL+"/panic-after-200", ``)
 			assert.Equal(t, 200, res.StatusCode) // After response sent.
-			body, err := ioutil.ReadAll(res.Body)
+			body, err := io.ReadAll(res.Body)
 			assert.NoError(t, err)
 			assert.Equal(t, `{"hi":"hello"}`+"\n", string(body))
 			assert.NoError(t, res.Body.Close())
