@@ -1,6 +1,6 @@
 module github.com/m3dev/dsps/server
 
-go 1.18
+go 1.19
 
 require (
 	cloud.google.com/go v0.74.0 // indirect
